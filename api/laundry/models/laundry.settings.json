@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "laundries",
+  "info": {
+    "name": "Laundry"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Localization": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Created": {
+      "type": "date"
+    },
+    "Photos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
